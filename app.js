@@ -1,9 +1,25 @@
-function refresh() {
-  document.getElementById(".god-quote").onclick = displayDate;
-};
+const url = "https://api.quotable.io/random";
 
-$(document).ready(function() {
- $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
-    $(".god-quote").html(a[0].content + "<p>— " + a[0].title + "</p>")
-  });
-});
+function generateQuote() {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      var html = "";
+      var quote = "";
+      var author = "";
+      quote = data.content;
+      author = data.author;
+
+      html +=
+        "<div class='quote'><i class='fa fa-quote-right' aria-hidden='true' id='q'></i> " +
+        quote +
+        "<i class='fa fa-quote-right'></i></div>";
+
+      html += "<div class='author'>" + author + "</div>";
+      
+      html += "<p><button class='btn btn-default'><a href='https://twitter.com/intent/tweet?text=" + quote + " -- " + author + " https://goo.gl/4Hecgs&hashtags=quotes' target='_blank' title='Tweet'><i class='fa fa-twitter' id='twitter'></i>Tweet</button></a></p>";
+      
+      $("#quote").html(html);
+    });
+}
