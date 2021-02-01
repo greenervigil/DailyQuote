@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   color: black;
   margin: 40px;
 }
@@ -8,10 +8,11 @@ h1 {
 footer p {
   margin-top: 15px;
   margin-left: 30px;
+  text-align: center;
 }
 
 .jumbotron {
-  background-color: #123;
+  background-color: #909090;
 }
 
 .float-right {
@@ -19,61 +20,24 @@ footer p {
   margin-right: 20px;
 }
 
-.speech {
-  background-color: white;
-  position: relative;
-  width: relative;
-  height: relative;
-  text-align: center;
-  line-height:  100px;
-  border: 2px solid;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 4px #888;
-  -moz-box-shadow: 2px 2px 4px #888;
-  box-shadow: 2px 2px 4px #888;
-}
-
-div.speech:before {
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 30px;
-  top: 100px;
-  border: 25px solid;
-  border-color: #666 transparent transparent #666;
-}
-
-div.speech:after {
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 38px;
-  top: 100px;
-  border: 15px solid;
-  border-color: #fff transparent transparent #fff;
-}
-
 div.t {
   position: relative;
   width: relative;
   height: relative;
   text-align: center;
-  line-height: 100px;
+  line-height: 80px;
   background-color: #fff;
-  border: 8px solid #666;
+  border: 5px solid #aaa;
   -webkit-border-radius: 58px;
   -moz-border-radius: 58px;
   border-radius: 58px;
   -webkit-box-shadow: 2px 2px 4px #888;
   -moz-box-shadow: 2px 2px 4px #888;
-  box-shadow: 2px 2px 4px #888;
+  box-shadow: 10px 10px 30px #888;
 }
 
-div.t:before, div.t:after {
+div.t:before,
+div.t:after {
   left: 10px;
   top: 70px;
   width: 40px;
@@ -93,4 +57,11 @@ div.t:after {
   -webkit-border-radius: 18px;
   -moz-border-radius: 18px;
   border-radius: 18px;
+}
+
+#quote {
+  background-color: white;
+  margin: 10px;
+  border-radius: 50px;
+  border: white;
 }
